@@ -49,8 +49,13 @@ a:focus,button:focus{outline:none}
 /* REMOVER o gradiente rosa */
 .jumbotron:before{display:none}
 /* Texto */
-.jumbotron h1{line-height:.9;font-weight:bold;display:inline-block;border:15px solid #fff;padding:30px;font-size:9rem;opacity:0;animation:1s fadeInFromTop cubic-bezier(.785,.135,.15,.86) 1s forwards}
-.jumbotron-single h1{font-size:3rem!important}
+.jumbotron h1 {
+  line-height: 1.2;
+  font-weight: bold;
+  font-size: 3rem;
+  opacity: 0;
+  animation: 1s fadeInFromTop cubic-bezier(.785,.135,.15,.86) 1s forwards;
+}
 
 /* ------------------ GLASS EFFECT BOX ------------------ */
 .hero-glass{
