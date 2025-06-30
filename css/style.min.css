@@ -16,6 +16,9 @@ section{position:relative}
 .bg-fixed{background-size:cover}
 .bg-grey{background-color:#f7f8f9}
 .fs-40{font-size:40px}
+.text-vialis-red {
+  color: #9B0F13; /* ou o vermelho exato do logo se souberes o código */
+}
 
 /* ------------------ LINKS & BOTÕES ------------------ */
 a{color:#bf1e2e;transition:.3s}
