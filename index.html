@@ -14,25 +14,40 @@
   <link rel="stylesheet" href="vendor/owlcarousel/owl.carousel.min.css">
   <link rel="stylesheet" href="vendor/lightcase/lightcase.css">
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-
-  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Lato:300,400|Work+Sans:300,400,700" rel="stylesheet">
-
-  <!-- CSS -->
   <link rel="stylesheet" href="css/style.min.css">
   <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" crossorigin="anonymous">
-
   <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
 
   <style>
+    .text-vialis-red {
+      color: #9B0F13;
+    }
+
+    .display-1 {
+      font-size: 4.5rem;
+      line-height: 1.1;
+    }
+
     .hero-glass {
-      background: rgba(255, 255, 255, 0.2);
-      border-radius: 1rem;
-      padding: 30px;
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      background: rgba(255, 255, 255, 0.35);
+      border-radius: 1.5rem;
+      padding: 50px 40px;
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      animation: fadeInFromTop 1.2s ease forwards;
+      opacity: 0;
+      transform: translateY(-30px);
+    }
+
+    @keyframes fadeInFromTop {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
   </style>
 </head>
@@ -62,8 +77,9 @@
   <div class="jumbotron d-flex align-items-center" style="background-image: url('img/wagyu_banner.jpg'); background-size: cover; background-position: center; height: 90vh;">
     <div class="container d-flex justify-content-center align-items-center text-white" style="height:100%;">
       <div class="hero-glass text-center">
-       <h1 class="display-4 font-weight-bold text-vialis-red">Do mar à serra, do centro ao sul</h1>
-<p class="lead text-vialis-red">Qualidade, frescura e sabor!</p>
+        <h1 class="display-1 font-weight-bold text-vialis-red">Do mar à serra,<br>do centro ao sul</h1>
+        <p class="lead text-vialis-red mt-4">Qualidade, frescura e sabor!</p>
+        <a href="#sobre" class="btn btn-primary mt-4">Saber mais</a>
       </div>
     </div>
   </div>
@@ -101,15 +117,9 @@
         <p>Exemplos da variedade e qualidade dos nossos artigos.</p>
       </div>
       <div class="row">
-        <div class="col-md-4 mb-4">
-          <img src="img/photo-1.jpg" class="img-fluid rounded" alt="Produto 1">
-        </div>
-        <div class="col-md-4 mb-4">
-          <img src="img/photo-2.jpg" class="img-fluid rounded" alt="Produto 2">
-        </div>
-        <div class="col-md-4 mb-4">
-          <img src="img/photo-3.jpg" class="img-fluid rounded" alt="Produto 3">
-        </div>
+        <div class="col-md-4 mb-4"><img src="img/photo-1.jpg" class="img-fluid rounded" alt="Produto 1"></div>
+        <div class="col-md-4 mb-4"><img src="img/photo-2.jpg" class="img-fluid rounded" alt="Produto 2"></div>
+        <div class="col-md-4 mb-4"><img src="img/photo-3.jpg" class="img-fluid rounded" alt="Produto 3"></div>
       </div>
     </div>
   </section>
@@ -128,15 +138,9 @@
         </div>
         <div class="col-lg-6">
           <form>
-            <div class="form-group">
-              <input type="text" class="form-control" placeholder="Nome">
-            </div>
-            <div class="form-group">
-              <input type="email" class="form-control" placeholder="Email">
-            </div>
-            <div class="form-group">
-              <textarea class="form-control" rows="4" placeholder="Mensagem"></textarea>
-            </div>
+            <div class="form-group"><input type="text" class="form-control" placeholder="Nome"></div>
+            <div class="form-group"><input type="email" class="form-control" placeholder="Email"></div>
+            <div class="form-group"><textarea class="form-control" rows="4" placeholder="Mensagem"></textarea></div>
             <button type="submit" class="btn btn-primary">Enviar</button>
           </form>
         </div>
