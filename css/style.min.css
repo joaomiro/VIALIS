@@ -1,21 +1,44 @@
-
 /*
  * Estilo personalizado para VIALIS FOOD, LDA
  * Limpo e modernizado com cor principal: #9B0F13
  */
 
 /* ------------------ REGRAS GERAIS ------------------ */
-html, body { width: 100%; overflow-x: hidden; }
-body { font-family: 'Lato', sans-serif; font-weight: 300; }
-h1, h2, h3, h4, h5, h6 { font-family: 'Work Sans', sans-serif; margin-top: 0; }
-img { max-width: 100%; }
-section { position: relative; }
-.section-content { padding: 80px 0; }
-.text-vialis-red { color: #9B0F13; }
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+body {
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Work Sans', sans-serif;
+  margin-top: 0;
+}
+img {
+  max-width: 100%;
+}
+section {
+  position: relative;
+}
+.section-content {
+  padding: 80px 0;
+}
+.text-vialis-red {
+  color: #9B0F13;
+}
 
-/* ------------------ BOTÃ•ES E LINKS ------------------ */
-a { color: #9B0F13; transition: 0.3s; }
-a:hover, .btn:hover { text-decoration: none; color: #6f0b11; }
+/* ------------------ BOTÕES E LINKS ------------------ */
+a {
+  color: #9B0F13;
+  transition: 0.3s;
+}
+a:hover,
+.btn:hover {
+  text-decoration: none;
+  color: #6f0b11;
+}
 .btn {
   font-size: 14px;
   font-weight: 600;
@@ -43,73 +66,91 @@ a:hover, .btn:hover { text-decoration: none; color: #6f0b11; }
   z-index: 11;
   background: white !important;
 }
-.navbar-brand { font-size: 40px; color: #000; }
-.navbar-nav .nav-link { color: #333; transition: 0.3s; }
-.navbar-toggler { font-size: 2rem; color: #333; }
+.navbar-brand {
+  font-size: 40px;
+  color: #000;
+}
+.navbar-nav .nav-link {
+  color: #333;
+  transition: 0.3s;
+}
+.navbar-toggler {
+  font-size: 2rem;
+  color: #333;
+}
 
 /* ------------------ HERO / JUMBOTRON TYPOGRAPHY ------------------ */
+.hero-glass {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 1rem;
+  padding: 30px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
 
 .hero-glass h1 {
-  font-size: 4rem;
+  font-size: 8rem;
   font-weight: 700;
   color: #9B0F13;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.15);
 }
 
 .hero-glass p.lead {
-  font-size: 1.5rem;
+  font-size: 3rem;
   color: #9B0F13;
   margin-bottom: 2rem;
 }
 
 .hero-glass .btn {
-  font-size: 1rem;
-  padding: 10px 25px;
+  font-size: 1.2rem;
+  padding: 12px 30px;
   border-radius: 25px;
 }
 
 /* ------------------ RESPONSIVO ------------------ */
+@media (max-width: 1200px) {
+  .hero-glass h1 {
+    font-size: 6rem;
+  }
+  .hero-glass p.lead {
+    font-size: 2.5rem;
+  }
+}
+
 @media (max-width: 992px) {
   .hero-glass h1 {
-    font-size: 3rem;
+    font-size: 4rem;
   }
-
   .hero-glass p.lead {
-    font-size: 1.3rem;
+    font-size: 2rem;
   }
 }
 
 @media (max-width: 768px) {
   .hero-glass h1 {
-    font-size: 2.2rem;
+    font-size: 3rem;
   }
-
   .hero-glass p.lead {
-    font-size: 1.1rem;
+    font-size: 1.4rem;
   }
-
   .hero-glass .btn {
-    font-size: 0.95rem;
-    padding: 9px 20px;
+    font-size: 1rem;
+    padding: 10px 25px;
   }
 }
 
 @media (max-width: 480px) {
   .hero-glass h1 {
-    font-size: 1.8rem;
+    font-size: 2.2rem;
   }
-
   .hero-glass p.lead {
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
-
   .hero-glass .btn {
-    font-size: 0.9rem;
-    padding: 8px 18px;
+    font-size: 0.95rem;
+    padding: 8px 20px;
   }
-}
-/* ------------------ RWD ------------------ */
-@media (max-width: 767px) {
-  .display-1 { font-size: 2.8rem; }
-  .hero-glass { padding: 30px 20px; }
 }
