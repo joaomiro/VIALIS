@@ -23,53 +23,31 @@
   <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" crossorigin="anonymous">
 
-  <!-- Custom overrides to remove pink overlay and set navbar colors -->
-  <style>
-    /* Remove gradient overlay and decorative shapes */
-    .jumbotron::before,
-    .overlay::before,
-    .rectangle-1,
-    .rectangle-2,
-    .rectangle-transparent-1,
-    .rectangle-transparent-2,
-    .circle-1,
-    .circle-2,
-    .circle-3,
-    .triangle {
-      display: none !important;
-    }
-
-    /* Ensure hero text stays readable over the photo */
-    .jumbotron {
-      background-color: rgba(0, 0, 0, 0.4); /* subtle dark overlay via bg-color if needed */
-    }
-
-    /* Navbar colours */
-    .navbar-nav .nav-link,
-    .navbar-toggler {
-      color: #333 !important;
-    }
-    .navbar-nav .nav-link:hover {
-      opacity: 1 !important;
-      color: #bf1e2e !important; /* tomate escuro opcional */
-    }
-    .navbar-nav:hover li a { opacity: 1 !important; }
-  </style>
-
   <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+
+  <style>
+    .hero-glass {
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 1rem;
+      padding: 30px;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    }
+  </style>
 </head>
 
 <body data-spy="scroll" data-target="#navbar" class="static-layout">
   <nav id="header-navbar" class="navbar navbar-expand-lg py-4 bg-white">
     <div class="container">
       <a class="navbar-brand d-flex align-items-center" href="/">
-        <img src="img/vialis_horizontal.png" alt="VIALIS Logo" style="height:40px;">
+        <img src="img/VIALIS_logo.png" alt="VIALIS Logo" style="height:40px;">
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-nav-header">
         <span class="lnr lnr-menu"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbar-nav-header">
-        <ul class="navbar-nav ml-auto text-dark">
+        <ul class="navbar-nav ml-auto">
           <li class="nav-item"><a class="nav-link text-dark" href="#">Início</a></li>
           <li class="nav-item"><a class="nav-link text-dark" href="#sobre">Sobre</a></li>
           <li class="nav-item"><a class="nav-link text-dark" href="#valores">Valores</a></li>
@@ -82,15 +60,13 @@
 
   <!-- Hero Section -->
   <div class="jumbotron d-flex align-items-center" style="background-image: url('img/wagyu_banner.jpg'); background-size: cover; background-position: center; height: 90vh;">
-    <div class="container text-center text-white">
-      <h1 class="display-4 font-weight-bold">Do mar à serra, do centro ao sul</h1>
-      <p class="lead">Qualidade, frescura e sabor!</p>
+    <div class="container d-flex justify-content-center align-items-center text-white" style="height:100%;">
+      <div class="hero-glass text-center">
+        <h1 class="display-4 font-weight-bold">Do mar à serra, do centro ao sul</h1>
+        <p class="lead">Qualidade, frescura e sabor!</p>
+      </div>
     </div>
   </div>
-
-  <!-- Resto do conteúdo continua como estava... -->
-
-
 
   <!-- Sobre nós -->
   <section id="sobre" class="section-content bg-white">
