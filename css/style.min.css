@@ -1,112 +1,96 @@
+
 /*
- * Roxy (adaptado para VIALIS FOOD, LDA)
- * Limpo de gradientes rosa e formas decorativas
- * Cor principal: #bf1e2e
+ * Estilo personalizado para VIALIS FOOD, LDA
+ * Limpo e modernizado com cor principal: #9B0F13
  */
 
 /* ------------------ REGRAS GERAIS ------------------ */
-html, body{width:100%;overflow-x:hidden}
-body{font-family:'Lato',sans-serif;font-weight:300}
-h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6{font-family:'Work Sans',sans-serif;margin-top:0}
-img{max-width:100%}
-section{position:relative}
-.section-content{padding:80px 0}
-.title-wrap,.section-title{text-align:center}
-.shadow{box-shadow:0 10px 30px rgba(67,80,98,.24),0 2px 4px rgba(67,80,98,.1)!important}
-.bg-fixed{background-size:cover}
-.bg-grey{background-color:#f7f8f9}
-.fs-40{font-size:40px}
-.text-vialis-red {
-  color: #9B0F13; /* ou o vermelho exato do logo se souberes o código */
+html, body { width: 100%; overflow-x: hidden; }
+body { font-family: 'Lato', sans-serif; font-weight: 300; }
+h1, h2, h3, h4, h5, h6 { font-family: 'Work Sans', sans-serif; margin-top: 0; }
+img { max-width: 100%; }
+section { position: relative; }
+.section-content { padding: 80px 0; }
+.text-vialis-red { color: #9B0F13; }
+
+/* ------------------ BOTÃ•ES E LINKS ------------------ */
+a { color: #9B0F13; transition: 0.3s; }
+a:hover, .btn:hover { text-decoration: none; color: #6f0b11; }
+.btn {
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 30px;
+  padding: 10px 30px;
+  text-transform: capitalize;
+  transition: 0.3s;
 }
-
-/* ------------------ LINKS & BOTÕES ------------------ */
-a{color:#bf1e2e;transition:.3s}
-a:hover,.btn:hover{text-decoration:none;color:#8b0d1b}
-a:focus,button:focus{outline:none}
-
-.btn{font-size:14px;font-weight:600;border-radius:30px;padding:9px 25px;text-transform:capitalize;transition:.3s}
-.btn-primary{background:#bf1e2e;border-color:#bf1e2e;color:#fff}
-.btn-primary:hover{background:#8b0d1b;border-color:#8b0d1b}
-.btn-outline-primary{color:#fff;background:transparent;border-color:#fff}
-.btn-outline-primary:hover{background:#bf1e2e;border-color:#bf1e2e}
-.btn-shadow{box-shadow:-5px 8px 20px rgba(191,30,46,.15)}
-.btn-link{color:#bf1e2e}
-.progress-bar{background:#bf1e2e}
+.btn-primary {
+  background: #9B0F13;
+  border-color: #9B0F13;
+  color: #fff;
+}
+.btn-primary:hover {
+  background: #6f0b11;
+  border-color: #6f0b11;
+}
 
 /* ------------------ NAVBAR ------------------ */
-#header-navbar{position:absolute;top:0;left:0;right:0;z-index:11;transition:all .3s cubic-bezier(.785,.135,.15,.86)}
-.navbar-brand{font-size:40px;color:#000}
-.navbar-nav .nav-link{color:#333;transition:.3s}
-.navbar-nav:hover li a{opacity:.5}
-.navbar-nav:hover li a:hover{opacity:1}
-.navbar-toggler{font-size:2rem;color:#333}
+#header-navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 11;
+  background: white !important;
+}
+.navbar-brand { font-size: 40px; color: #000; }
+.navbar-nav .nav-link { color: #333; transition: 0.3s; }
+.navbar-toggler { font-size: 2rem; color: #333; }
 
-/* ------------------ HERO / JUMBOTRON ------------------ */
-.jumbotron{color:#fff;padding:80px 0;background-repeat:no-repeat;background-size:cover;background-position:center;border-radius:0;margin-bottom:0;overflow:hidden;min-height:100vh}
-@media (max-width:767px) and (orientation:landscape){.jumbotron{min-height:500px}}
-.jumbotron .container{position:relative;z-index:1}
-/* REMOVER o gradiente rosa */
-.jumbotron:before{display:none}
-/* Texto */
-.jumbotron h1 {
-  line-height: 1.2;
-  font-weight: bold;
-  font-size: 3rem;
+/* ------------------ HERO ------------------ */
+.jumbotron {
+  color: #fff;
+  padding: 80px 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 0;
+  margin-bottom: 0;
+  overflow: hidden;
+  min-height: 100vh;
+}
+.jumbotron .container {
+  position: relative;
+  z-index: 1;
+}
+.jumbotron:before { display: none; }
+
+.hero-glass {
+  background: rgba(255, 255, 255, 0.35);
+  border-radius: 1.5rem;
+  padding: 50px 40px;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  animation: fadeInFromTop 1.2s ease forwards;
   opacity: 0;
-  animation: 1s fadeInFromTop cubic-bezier(.785,.135,.15,.86) 1s forwards;
+  transform: translateY(-30px);
+}
+.display-1 {
+  font-size: 4.5rem;
+  line-height: 1.1;
 }
 
-/* ------------------ GLASS EFFECT BOX ------------------ */
-.hero-glass{
-  background:rgba(255,255,255,.2);
-  border-radius:1rem;
-  padding:30px;
-  backdrop-filter:blur(10px);
-  -webkit-backdrop-filter:blur(10px);
-  border:1px solid rgba(255,255,255,.4);
-  box-shadow:0 4px 30px rgba(0,0,0,.1);
+@keyframes fadeInFromTop {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-/* ------------------ OVERLAY UTIL (para outras secções) ------------------ */
-.overlay{color:#fff}
-.overlay:before{display:none} /* remove gradiente rosa */
-.overlay.bg-white{color:#000}
-.overlay.bg-white:before{background:#fff;opacity:.7}
-
-/* ------------------ REMOVER FORMAS DECORATIVAS ------------------ */
-.rectangle-1,
-.rectangle-2,
-.rectangle-transparent-1,
-.rectangle-transparent-2,
-.circle-1,
-.circle-2,
-.circle-3,
-.triangle{display:none!important}
-
-/* ------------------ FEATURES / HOVERS ------------------ */
-.feature-item{transition:.2s!important}
-.feature-item:hover{transform:translateY(-13px)}
-
-/* ------------------ TESTIMONIAL / OWL DOTS ------------------ */
-.testi-icon{color:#bf1e2e}
-.owl-dot span{background:rgba(191,30,46,.3)}
-.owl-dot.active>span{box-shadow:0 0 0 2px #bf1e2e;background:transparent}
-
-/* ------------------ FORM/INPUT HIGHLIGHT ------------------ */
-.form-control:focus{border-color:#bf1e2e;box-shadow:0 0 0 .2rem rgba(191,30,46,.25)}
-
-/* ------------------ RESPONSIVO ------------------ */
-@media(max-width:992px){
-  .not-on-top #header-navbar{position:fixed;top:0;width:100%;background:#fff;z-index:11}
-  #header-navbar{padding-top:15px!important;padding-bottom:15px!important}
-  .navbar-transparent .navbar-collapse{background:#fff;padding:10px}
+/* ------------------ RWD ------------------ */
+@media (max-width: 767px) {
+  .display-1 { font-size: 2.8rem; }
+  .hero-glass { padding: 30px 20px; }
 }
-@media(max-width:767px){
-  .jumbotron h1{font-size:6rem}
-  .grid-item{width:100%}
-  .progress{height:30px;font-size:16px}
-}
-
-/* ------------------ ANIMAÇÕES (mantidas) ------------------ */
-@keyframes fadeInFromTop{from{opacity:0;transform:translateY(-20px)}to{opacity:1;transform:translateY(0)}}
