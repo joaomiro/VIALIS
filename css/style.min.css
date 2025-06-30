@@ -758,3 +758,12 @@ section {
     font-size: 16px; } }
 
 /*=====  End of RESPONSIVE  ======*/
+
+.hero-glass {
+  background: rgba(255, 255, 255, 0.2); /* fundo branco semi-transparente */
+  border-radius: 1rem;
+  padding: 30px;
+  backdrop-filter: blur(10px); /* efeito de desfoque */
+  -webkit-backdrop-filter: blur(10px); /* suporte Safari */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
