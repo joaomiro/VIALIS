@@ -23,6 +23,39 @@
   <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" crossorigin="anonymous">
 
+  <!-- Custom overrides to remove pink overlay and set navbar colors -->
+  <style>
+    /* Remove gradient overlay and decorative shapes */
+    .jumbotron::before,
+    .overlay::before,
+    .rectangle-1,
+    .rectangle-2,
+    .rectangle-transparent-1,
+    .rectangle-transparent-2,
+    .circle-1,
+    .circle-2,
+    .circle-3,
+    .triangle {
+      display: none !important;
+    }
+
+    /* Ensure hero text stays readable over the photo */
+    .jumbotron {
+      background-color: rgba(0, 0, 0, 0.4); /* subtle dark overlay via bg-color if needed */
+    }
+
+    /* Navbar colours */
+    .navbar-nav .nav-link,
+    .navbar-toggler {
+      color: #333 !important;
+    }
+    .navbar-nav .nav-link:hover {
+      opacity: 1 !important;
+      color: #bf1e2e !important; /* tomate escuro opcional */
+    }
+    .navbar-nav:hover li a { opacity: 1 !important; }
+  </style>
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
 </head>
 
@@ -54,6 +87,9 @@
       <p class="lead">Qualidade, frescura e sabor!</p>
     </div>
   </div>
+
+  <!-- Resto do conteúdo continua como estava... -->
+
 
 
   <!-- Sobre nós -->
