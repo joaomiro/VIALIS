@@ -55,26 +55,29 @@
 <!-- NAV BAR -->
 <nav id="header-navbar" class="navbar navbar-expand-lg py-4 bg-white">
   <div class="container">
-    <!-- Logotipo como link para home -->
     <a class="navbar-brand d-flex align-items-center" href="https://joaomiro.github.io/VIALIS/">
       <img src="img/vialis_horizontal.png" alt="VIALIS Logo" style="height:40px;">
     </a>
-
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-nav-header">
       <span class="lnr lnr-menu"></span>
     </button>
-
     <div class="collapse navbar-collapse" id="navbar-nav-header">
-      <ul class="navbar-nav ml-auto align-items-center">
+      <ul class="navbar-nav ml-auto align-items-lg-center">
+        <li class="nav-item"><a class="nav-link text-dark" href="#">Início</a></li>
         <li class="nav-item"><a class="nav-link text-dark" href="#sobre">Sobre</a></li>
         <li class="nav-item"><a class="nav-link text-dark" href="#valores">Valores</a></li>
         <li class="nav-item"><a class="nav-link text-dark" href="#portfolio">Galeria</a></li>
         <li class="nav-item"><a class="nav-link text-dark" href="#contacto">Contacto</a></li>
-        <!-- Botão de download -->
-        <li class="nav-item ml-3">
-          <a href="ficheiros/catalogo-vialis.pdf" class="btn btn-sm btn-danger" download>
+
+        <!-- Dropdown para catálogos -->
+        <li class="nav-item dropdown ml-lg-3 mt-3 mt-lg-0">
+          <a class="btn btn-sm btn-danger dropdown-toggle" href="#" id="catalogoDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <i class="fas fa-file-download mr-1"></i> Catálogo
           </a>
+          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="catalogoDropdown">
+            <a class="dropdown-item" href="ficheiros/catalogo-horeca.pdf" download>Catálogo Horeca</a>
+            <a class="dropdown-item" href="ficheiros/catalogo-asiatico.pdf" download>Catálogo Asiático</a>
+          </div>
         </li>
       </ul>
     </div>
