@@ -8,23 +8,29 @@ html, body {
   width: 100%;
   overflow-x: hidden;
 }
+
 body {
   font-family: 'Lato', sans-serif;
   font-weight: 300;
 }
+
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Work Sans', sans-serif;
   margin-top: 0;
 }
+
 img {
   max-width: 100%;
 }
+
 section {
   position: relative;
 }
+
 .section-content {
   padding: 80px 0;
 }
+
 .text-vialis-red {
   color: #9B0F13;
 }
@@ -34,11 +40,13 @@ a {
   color: #9B0F13;
   transition: 0.3s;
 }
+
 a:hover,
 .btn:hover {
   text-decoration: none;
   color: #6f0b11;
 }
+
 .btn {
   font-size: 14px;
   font-weight: 600;
@@ -47,11 +55,13 @@ a:hover,
   text-transform: capitalize;
   transition: 0.3s;
 }
+
 .btn-primary {
   background: #9B0F13;
   border-color: #9B0F13;
   color: #fff;
 }
+
 .btn-primary:hover {
   background: #6f0b11;
   border-color: #6f0b11;
@@ -66,40 +76,63 @@ a:hover,
   z-index: 11;
   background: white !important;
 }
+
 .navbar-brand {
   font-size: 40px;
   color: #000;
 }
+
 .navbar-nav .nav-link {
   color: #333;
   transition: 0.3s;
 }
+
 .navbar-toggler {
   font-size: 2rem;
   color: #333;
 }
 
-/* ------------------ HERO / JUMBOTRON TYPOGRAPHY ------------------ */
+/* Dropdown mais compacto no mobile */
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    background-color: white;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    width: fit-content;
+    max-width: 90%;
+    margin-left: auto;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  }
+
+  .dropdown-menu {
+    position: absolute !important;
+    right: 1rem;
+    left: auto !important;
+    width: max-content;
+  }
+}
+
+/* ------------------ HERO ------------------ */
 .hero-glass {
   background: rgba(255, 255, 255, 0.2);
   border-radius: 1rem;
-  padding: 30px; /* ligeiramente maior */
+  padding: 30px;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.4);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  max-width: 880px; /* um pouco mais largo */
+  max-width: 880px;
 }
 
 .hero-glass h1 {
-  font-size: 3rem; /* aumentado de 2.6rem */
+  font-size: 3rem;
   font-weight: 700;
   color: #fff;
   margin-bottom: 1rem;
 }
 
 .hero-glass p.lead {
-  font-size: 1.3rem; /* aumentado de 1.1rem */
+  font-size: 1.3rem;
   color: #fff;
   margin-bottom: 1.8rem;
 }
@@ -110,11 +143,31 @@ a:hover,
   border-radius: 24px;
 }
 
+/* ------------------ SOBRE ------------------ */
+#sobre {
+  margin-top: 80px;
+}
+
+/* ------------------ GALERIA ------------------ */
+#portfolio h2 {
+  color: #9B0F13;
+}
+
+/* ------------------ VALORES ------------------ */
+#valores i {
+  transition: transform 0.3s ease;
+}
+
+#valores i:hover {
+  transform: scale(1.15) rotate(-3deg);
+}
+
 /* ------------------ RESPONSIVO ------------------ */
 @media (max-width: 1200px) {
   .hero-glass h1 {
     font-size: 6rem;
   }
+
   .hero-glass p.lead {
     font-size: 2.5rem;
   }
@@ -124,6 +177,7 @@ a:hover,
   .hero-glass h1 {
     font-size: 4rem;
   }
+
   .hero-glass p.lead {
     font-size: 2rem;
   }
@@ -133,9 +187,11 @@ a:hover,
   .hero-glass h1 {
     font-size: 3rem;
   }
+
   .hero-glass p.lead {
     font-size: 1.4rem;
   }
+
   .hero-glass .btn {
     font-size: 1rem;
     padding: 10px 25px;
@@ -146,9 +202,11 @@ a:hover,
   .hero-glass h1 {
     font-size: 2.2rem;
   }
+
   .hero-glass p.lead {
     font-size: 1.1rem;
   }
+
   .hero-glass .btn {
     font-size: 0.95rem;
     padding: 8px 20px;
