@@ -92,26 +92,6 @@ a:hover,
   color: #333;
 }
 
-/* Dropdown mais compacto no mobile */
-@media (max-width: 991.98px) {
-  .navbar-collapse {
-    background-color: white;
-    border-radius: 0.5rem;
-    padding: 1.5rem;
-    width: fit-content;
-    max-width: 90%;
-    margin-left: auto;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-  }
-
-  .dropdown-menu {
-    position: absolute !important;
-    right: 1rem;
-    left: auto !important;
-    width: max-content;
-  }
-}
-
 /* ------------------ HERO ------------------ */
 .hero-glass {
   background: rgba(255, 255, 255, 0.2);
@@ -210,5 +190,50 @@ a:hover,
   .hero-glass .btn {
     font-size: 0.95rem;
     padding: 8px 20px;
+  }
+}
+
+/* ------------------ MOBILE NAVBAR DROPDOWN ------------------ */
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    position: absolute;
+    top: 100%;
+    right: 1rem;
+    background-color: white;
+    border-radius: 0.75rem;
+    padding: 1.25rem 1rem;
+    width: 240px;
+    max-width: 90%;
+    margin-left: auto;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    z-index: 9999;
+  }
+
+  .navbar-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 1rem;
+  }
+
+  .navbar-nav .nav-link,
+  .navbar-nav .btn-danger {
+    width: 100%;
+    text-align: right;
+    padding-right: 1rem;
+  }
+
+  .navbar-nav .btn-danger {
+    justify-content: flex-end;
+    display: flex;
+  }
+
+  .dropdown-menu {
+    position: absolute !important;
+    right: 0;
+    left: auto !important;
+    width: 100%;
+    min-width: unset;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
   }
 }
