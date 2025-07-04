@@ -12,6 +12,7 @@ html, body {
   font-weight: 300;
   background-color: #fff;
   scroll-behavior: smooth;
+  padding-top: 70px; /* compensar navbar fixa */
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -43,11 +44,11 @@ section {
 
 /* ---------- NAVBAR ---------- */
 #header-navbar {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  z-index: 11;
+  z-index: 999;
   background: #ffffffee;
   height: 68px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.05);
@@ -92,6 +93,29 @@ section {
   border: 2px solid #c8a86b;
   padding: 6px 10px;
   border-radius: 6px;
+}
+
+/* ---------- DROPDOWN CORRETO ---------- */
+.dropdown-menu {
+  background: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  margin-top: 0.5rem !important;
+  z-index: 1000;
+  min-width: 200px;
+  right: 0;
+  left: auto !important;
+}
+
+.dropdown-item {
+  padding: 0.5rem 1rem;
+  font-size: 0.95rem;
+  color: #9B0F13;
+}
+
+.dropdown-item:hover {
+  background: #f7f7f7;
+  color: #6f0b11;
 }
 
 /* ---------- BOTÕES ---------- */
@@ -236,26 +260,5 @@ section {
     justify-content: center;
     border-radius: 30px;
     background: #9B0F13;
-  }
-
-  .dropdown-menu {
-    background: #fff;
-    border-radius: 0.5rem;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-    right: 0;
-    left: auto !important;
-    margin-top: 0.25rem;
-    min-width: 200px;
-  }
-
-  .dropdown-item {
-    padding: 0.5rem 1rem;
-    font-size: 0.95rem;
-    color: #9B0F13;
-  }
-
-  .dropdown-item:hover {
-    background: #f7f7f7;
-    color: #6f0b11;
   }
 }
