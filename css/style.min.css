@@ -1,7 +1,7 @@
 /*
  * Estilo luxuoso para VIALIS FOOD, LDA
  * Cor principal: #9B0F13 | Dourado: #c8a86b
- * Tipografia refinada e navbar mais fina
+ * Tipografia refinada e navbar com glassmorphism gourmet
  */
 
 /* ---------- REGRAS GERAIS ---------- */
@@ -12,11 +12,6 @@ html, body {
   font-weight: 300;
   background-color: #fff;
   scroll-behavior: smooth;
-  margin: 0;
-}
-
-main, .jumbotron, #sobre {
-  margin-top: 70px; /* Compensar altura da navbar fixa */
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -52,13 +47,17 @@ section {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 999;
-  background: #ffffffee;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(200, 168, 107, 0.25);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
   height: 68px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-  border-bottom: 1px solid #eee;
   display: flex;
   align-items: center;
+  border-top: 1px solid rgba(200, 168, 107, 0.5);
+  border-bottom: 1px solid rgba(200, 168, 107, 0.5);
 }
 
 .navbar-brand {
