@@ -120,7 +120,28 @@ body {
   background-position: center bottom;
   background-attachment: scroll;
 }
+.contact-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #9B0F13;
+  color: white;
+  border-radius: 50%;
+  width: 52px;
+  height: 52px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+  z-index: 2000;
+  transition: background 0.3s ease;
+}
 
+.contact-float:hover {
+  background-color: #b00d10;
+  text-decoration: none;
+}
 </style>
 </head>
 
@@ -267,6 +288,10 @@ body {
 <script>
   AOS.init();
 </script>
+<!-- Botão Flutuante de Contacto -->
+<a href="https://wa.me/351910000000" class="contact-float" target="_blank" title="Falar com o Comercial">
+  <i class="fas fa-comments"></i>
+</a>
 
 </body>
 </html>
