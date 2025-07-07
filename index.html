@@ -32,8 +32,10 @@
     }
 
     /* --- HERO BOX --- */
-      /* Hero Glass Enhancements */
+  /* Hero Glass Enhancements */
     .hero-glass {
+      position: relative;
+      z-index: 10;
       background: rgba(255, 255, 255, 0.15);
       border-radius: 1.5rem;
       padding: 50px 40px;
@@ -42,7 +44,7 @@
       box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
       border: none;
       color: #111;
-      transform: translateY(-130px);
+      transform: translateY(-90px);
       transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
     }
     .hero-glass:hover {
@@ -256,11 +258,11 @@
 </nav>
 
 
-  <!-- Hero Section -->
-  <div class="jumbotron d-flex align-items-center" style="background-image: url('img/gourmet_intro.png'); background-size: cover; background-position: center; height: 110vh;">
-    <div class="container d-flex justify-content-center align-items-center text-white" style="height:100%;">
+ <!-- Hero Section -->
+  <div class="jumbotron d-flex align-items-center" style="position: relative; z-index: 5; background-image: url('img/gourmet_intro.png'); background-size: cover; background-position: center; height: 110vh;">
+    <div class="container d-flex justify-content-center align-items-center text-white" style="height:100%; position: relative;">
       <div class="hero-glass text-center" data-aos="fade-up">
-        <img src="img/logo_vialis.png" alt="VIALIS" style="max-width: 180px; margin-bottom: 1.5rem;">
+        <img src="img/logo_vialis.png" alt="VIALIS" style="max-width: 180px; margin-bottom: 1.5rem; z-index: 11; position: relative;">
         <p class="tagline">Qualidade, frescura e sabor!</p>
         <div class="btn-group mb-4">
           <a href="#sobre" class="btn btn-outline-light">Saber Mais</a>
