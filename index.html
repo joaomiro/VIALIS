@@ -111,74 +111,80 @@
       background-attachment: scroll;
     }
 
-    /* --- BOTÃO FLUTUANTE WHATSAPP --- */
-    /* Desktop: texto sempre visível */
+     /* --- BOTÃO WHATSAPP --- */
+  .contact-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #9B0F13;
+    color: #fff !important;
+    border-radius: 28px;
+    padding: 0 16px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+    z-index: 2000;
+    text-decoration: none !important;  /* sem sublinhado */
+    transition: background-color 0.3s ease;
+    outline: none;
+  }
+
+  .contact-float i {
+    font-size: 20px;
+  }
+
+  /* Hover / focus: dourado igual ao menu */
+  .contact-float:hover,
+  .contact-float:focus {
+    background-color: #b88a00;
+    color: #fff !important;
+    text-decoration: none;
+  }
+
+  /* Tooltip sempre visível no desktop */
+  .contact-tooltip {
+    margin-left: 4px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #fff;
+    pointer-events: none;
+  }
+
+  /* Versão mobile: redondo + balão ao hover */
+  @media (max-width: 767.98px) {
     .contact-float {
-      position: fixed;
-      bottom: 20px; right: 20px;
-      background-color: #9B0F13;
-      color: white;
-      border-radius: 28px;
-      padding: 0 16px;
-      height: 52px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-size: 16px;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.25);
-      z-index: 2000;
-      text-decoration: none;
-      transition: background 0.3s ease;
-    }
-    .contact-float:hover {
-      background-color: #9B0F13;
-    }
-    .contact-float i {
-      font-size: 20px;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      padding: 0;
+      justify-content: center;
+      gap: 0;
     }
     .contact-tooltip {
-      position: static;
-      opacity: 1;
-      background: transparent;
-      color: white;
-      font-size: 15px;
-      font-weight: 500;
-      border: none;
-      box-shadow: none;
+      position: absolute;
+      right: 70px;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: #fffbe6;
+      color: #9B0F13;
+      padding: 6px 14px;
+      border-radius: 6px;
+      font-size: 14px;
       white-space: nowrap;
-      pointer-events: auto;
-      transition: none;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+      border: 1px solid rgba(212, 175, 55, 0.6);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      font-weight: 500;
     }
-
-    /* Mobile: botão redondo + tooltip */
-    @media (max-width: 767.98px) {
-      .contact-float {
-        border-radius: 50%;
-        width: 60px; height: 60px;
-        padding: 0; justify-content: center;
-        gap: 0;
-      }
-      .contact-tooltip {
-        position: absolute;
-        right: 70px; top: 50%;
-        transform: translateY(-50%);
-        background-color: #fffbe6;
-        color: #9B0F13;
-        padding: 6px 14px;
-        border-radius: 6px;
-        font-size: 14px;
-        white-space: nowrap;
-        opacity: 0;
-        pointer-events: none;
-        transition: opacity 0.3s ease;
-        border: 1px solid rgba(212,175,55,0.6);
-        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-        font-weight: 500;
-      }
-      .contact-float:hover .contact-tooltip {
-        opacity: 1;
-      }
+    .contact-float:hover .contact-tooltip {
+      opacity: 1;
     }
+  }
   </style>
 </head>
 
