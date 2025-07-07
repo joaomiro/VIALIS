@@ -59,9 +59,20 @@
       margin-bottom: 2rem;
       font-size: 1.2rem;
     }
-    .hero-glass .btn-group .btn {
-      width: 160px;
-    }
+   /* Faz o grupo de botões ocupar toda a largura útil e centra-o */
+.hero-glass .btn-group {
+  display: flex;
+  width: calc(100% - 80px);  /* largura total menos padding lateral (40px+40px) */
+  max-width: 320px;          /* opcional: evita que fiquem demasiado largas */
+  margin: 0 auto 1rem;       /* auto centra horizontalmente */
+  gap: 1px;                  /* espaço mínimo entre os botões */
+}
+
+/* Faz cada botão crescer igualmente dentro do grupo */
+.hero-glass .btn-group .btn {
+  flex: 1;
+  margin: 0;                 /* remove margens extras */
+}
 
     /* Dropdown blur & style */
     .hero-glass .dropdown-menu {
