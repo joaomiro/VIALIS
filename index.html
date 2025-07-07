@@ -2,7 +2,7 @@
 <html lang="pt">
 
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>VIALIS FOOD, LDA</title>
   <meta name="description" content="Distribuição Alimentar Profissional">
@@ -20,189 +20,166 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" crossorigin="anonymous">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
 
-<style>
-.text-vialis-red {
-  color: #9B0F13;
-}
+  <style>
+    .text-vialis-red {
+      color: #9B0F13;
+    }
 
-/* --- HERO BOX --- */
-.hero-glass {
-  background: rgba(255, 255, 255, 0.25);
-  border-radius: 1.5rem;
-  padding: 40px 30px;
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  color: #111;
-  transform: translateY(-90px);
-  transition: transform 0.3s ease-in-out;
-}
+    /* --- HERO BOX --- */
+    .hero-glass {
+      background: rgba(255, 255, 255, 0.25);
+      border-radius: 1.5rem;
+      padding: 40px 30px;
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      color: #111;
+      transform: translateY(-90px);
+      transition: transform 0.3s ease-in-out;
+    }
+    .hero-glass h1 {
+      font-size: 1.9rem;
+      font-weight: 700;
+      color: #9B0F13;
+    }
 
-.hero-glass h1 {
-  font-size: 1.9rem;
-  font-weight: 700;
-  color: #9B0F13;
-}
+    /* --- NAVBAR --- */
+    #header-navbar {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 1030;
+      background: rgba(255, 255, 255, 0.4);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(212,175,55,0.4);
+      box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+      transition: background 0.3s ease;
+    }
+    .navbar-nav .nav-link {
+      color: #9B0F13 !important;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+    .navbar-nav .nav-link:hover {
+      color: #b88a00 !important;
+    }
+    .navbar-toggler .lnr-menu {
+      color: #9B0F13;
+      font-size: 1.5rem;
+    }
+    .navbar-collapse {
+      background-color: transparent;
+      padding: 1.5rem;
+      max-width: 300px;
+      margin-left: auto;
+    }
+    .dropdown-menu {
+      right: 0; left: auto;
+    }
 
-/* --- NAVBAR --- */
-#header-navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1030;
-  background: rgba(255, 255, 255, 0.4);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border-bottom: 1px solid rgba(212, 175, 55, 0.4);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-  transition: background 0.3s ease;
-}
+    /* --- DROPDOWN EM MOBILE --- */
+    @media (max-width: 991.98px) {
+      .navbar-collapse {
+        background: rgba(255,255,255,0.95);
+        backdrop-filter: blur(10px);
+      }
+      .dropdown-menu {
+        background-color: rgba(255,255,255,0.95) !important;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      }
+      .dropdown-menu .dropdown-item {
+        color: #333 !important;
+      }
+      .dropdown-menu .dropdown-item:hover {
+        background-color: #f8f9fa;
+      }
+    }
 
-.navbar-nav .nav-link {
-  color: #9B0F13 !important;
-  font-weight: 500;
-  transition: color 0.3s ease;
-}
+    /* --- LAYOUT BASE --- */
+    body {
+      padding-top: 80px;
+      margin: 0;
+    }
+    .jumbotron {
+      margin-top: -80px;
+      height: 100vh;
+      background-image: url('img/master_cook_vialis.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center bottom;
+      background-attachment: scroll;
+    }
 
-.navbar-nav .nav-link:hover {
-  color: #b88a00 !important;
-}
+    /* --- BOTÃO FLUTUANTE WHATSAPP --- */
+    /* Desktop: texto sempre visível */
+    .contact-float {
+      position: fixed;
+      bottom: 20px; right: 20px;
+      background-color: #9B0F13;
+      color: white;
+      border-radius: 28px;
+      padding: 0 16px;
+      height: 52px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 16px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+      z-index: 2000;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+    .contact-float:hover {
+      background-color: #b00d10;
+    }
+    .contact-float i {
+      font-size: 20px;
+    }
+    .contact-tooltip {
+      position: static;
+      opacity: 1;
+      background: transparent;
+      color: white;
+      font-size: 15px;
+      font-weight: 500;
+      border: none;
+      box-shadow: none;
+      white-space: nowrap;
+      pointer-events: auto;
+      transition: none;
+    }
 
-.navbar-toggler .lnr-menu {
-  color: #9B0F13;
-  font-size: 1.5rem;
-}
-
-.navbar-collapse {
-  background-color: transparent;
-  padding: 1.5rem;
-  max-width: 300px;
-  margin-left: auto;
-}
-
-.dropdown-menu {
-  right: 0;
-  left: auto;
-}
-
-/* --- DROPDOWN EM MOBILE --- */
-@media (max-width: 991.98px) {
-  .navbar-collapse {
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
-  }
-
-  .dropdown-menu {
-    background-color: rgba(255, 255, 255, 0.95) !important;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  }
-
-  .dropdown-menu .dropdown-item {
-    color: #333 !important;
-  }
-
-  .dropdown-menu .dropdown-item:hover {
-    background-color: #f8f9fa;
-  }
-}
-
-/* --- LAYOUT BASE --- */
-body {
-  padding-top: 80px;
-  margin: 0;
-}
-
-.jumbotron {
-  margin-top: -80px;
-  height: 100vh;
-  background-image: url('img/master_cook_vialis.png');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center bottom;
-  background-attachment: scroll;
-}
-
-/* BOTÃO FLOTANTE WHATSAPP */
-
-/* VERSÃO DESKTOP: botão largo com texto sempre visível */
-.contact-float {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color: #9B0F13;
-  color: white;
-  border-radius: 28px;
-  padding: 0 16px;
-  height: 52px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 16px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
-  z-index: 2000;
-  text-decoration: none;
-  transition: background 0.3s ease;
-}
-
-.contact-float:hover {
-  background-color: #b00d10;
-}
-
-.contact-float i {
-  font-size: 20px;
-}
-
-/* TEXTO VISÍVEL no desktop */
-.contact-tooltip {
-  position: static;
-  opacity: 1;
-  background: transparent;
-  color: white;
-  font-size: 15px;
-  font-weight: 500;
-  border: none;
-  box-shadow: none;
-  white-space: nowrap;
-  pointer-events: auto;
-  transition: none;
-}
-
-/* VERSÃO MOBILE: botão redondo com balão ao passar o dedo (ou hover em tablets) */
-@media (max-width: 767.98px) {
-  .contact-float {
-    border-radius: 50%;
-    width: 60px;
-    height: 60px;
-    padding: 0;
-    justify-content: center;
-    gap: 0;
-  }
-
-  .contact-tooltip {
-    position: absolute;
-    right: 70px;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: #fffbe6;
-    color: #9B0F13;
-    padding: 6px 14px;
-    border-radius: 6px;
-    font-size: 14px;
-    white-space: nowrap;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.3s ease;
-    border: 1px solid rgba(212, 175, 55, 0.6);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    font-weight: 500;
-  }
-
-  .contact-float:hover .contact-tooltip {
-    opacity: 1;
-  }
-}
+    /* Mobile: botão redondo + tooltip */
+    @media (max-width: 767.98px) {
+      .contact-float {
+        border-radius: 50%;
+        width: 60px; height: 60px;
+        padding: 0; justify-content: center;
+        gap: 0;
+      }
+      .contact-tooltip {
+        position: absolute;
+        right: 70px; top: 50%;
+        transform: translateY(-50%);
+        background-color: #fffbe6;
+        color: #9B0F13;
+        padding: 6px 14px;
+        border-radius: 6px;
+        font-size: 14px;
+        white-space: nowrap;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s ease;
+        border: 1px solid rgba(212,175,55,0.6);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        font-weight: 500;
+      }
+      .contact-float:hover .contact-tooltip {
+        opacity: 1;
+      }
+    }
+  </style>
 </head>
 
 <body>
