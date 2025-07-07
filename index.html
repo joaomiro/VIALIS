@@ -25,6 +25,7 @@
   color: #9B0F13;
 }
 
+/* --- HERO BOX --- */
 .hero-glass {
   background: rgba(255, 255, 255, 0.25);
   border-radius: 1.5rem;
@@ -44,6 +45,7 @@
   color: #9B0F13;
 }
 
+/* --- NAVBAR --- */
 #header-navbar {
   position: fixed;
   top: 0;
@@ -85,6 +87,7 @@
   left: auto;
 }
 
+/* --- DROPDOWN EM MOBILE --- */
 @media (max-width: 991.98px) {
   .navbar-collapse {
     background: rgba(255, 255, 255, 0.95);
@@ -105,6 +108,7 @@
   }
 }
 
+/* --- LAYOUT BASE --- */
 body {
   padding-top: 80px;
   margin: 0;
@@ -120,74 +124,85 @@ body {
   background-attachment: scroll;
 }
 
+/* BOTÃO FLOTANTE WHATSAPP */
+
+/* VERSÃO DESKTOP: botão largo com texto sempre visível */
 .contact-float {
   position: fixed;
   bottom: 20px;
   right: 20px;
   background-color: #9B0F13;
   color: white;
-  border-radius: 25px;
-  width: auto;
-  padding: 0 14px;
+  border-radius: 28px;
+  padding: 0 16px;
+  height: 52px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  gap: 10px;
   font-size: 16px;
-  gap: 8px;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
   z-index: 2000;
-  transition: all 0.3s ease;
   text-decoration: none;
-  overflow: visible;
+  transition: background 0.3s ease;
 }
 
 .contact-float:hover {
   background-color: #b00d10;
 }
 
+.contact-float i {
+  font-size: 20px;
+}
+
+/* TEXTO VISÍVEL no desktop */
 .contact-tooltip {
-  position: absolute;
-  right: 60px;
-  background-color: #fffbe6;
-  color: #9B0F13;
-  padding: 6px 14px;
-  border-radius: 6px;
-  font-size: 14px;
-  white-space: nowrap;
-  opacity: 0;
-  pointer-events: none;
-  transform: translateY(-50%);
-  top: 50%;
-  transition: opacity 0.3s ease;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  border: 1px solid rgba(212, 175, 55, 0.6);
-  font-weight: 500;
-}
-
-.contact-float:hover .contact-tooltip {
+  position: static;
   opacity: 1;
+  background: transparent;
+  color: white;
+  font-size: 15px;
+  font-weight: 500;
+  border: none;
+  box-shadow: none;
+  white-space: nowrap;
+  pointer-events: auto;
+  transition: none;
 }
 
+/* VERSÃO MOBILE: botão redondo com balão ao passar o dedo (ou hover em tablets) */
 @media (max-width: 767.98px) {
   .contact-float {
-    border-radius: 30px;
-    padding: 0 16px;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    padding: 0;
+    justify-content: center;
+    gap: 0;
   }
 
   .contact-tooltip {
-    position: static;
-    opacity: 1;
-    transform: none;
-    background: transparent;
-    color: white;
+    position: absolute;
+    right: 70px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #fffbe6;
+    color: #9B0F13;
+    padding: 6px 14px;
+    border-radius: 6px;
     font-size: 14px;
-    border: none;
-    box-shadow: none;
-    margin-left: 10px;
-    font-weight: 400;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    border: 1px solid rgba(212, 175, 55, 0.6);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    font-weight: 500;
+  }
+
+  .contact-float:hover .contact-tooltip {
+    opacity: 1;
   }
 }
-</style>
 </head>
 
 <body>
