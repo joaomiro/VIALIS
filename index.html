@@ -32,27 +32,30 @@
     }
 
     /* --- HERO BOX --- */
-/* herói posicionado absolutamente dentro da jumbotron */
-.hero-glass {
-  position: absolute;
-  top: 25%;      /* coloca mais acima: ajusta este valor entre 20% e 30% até ficar certinho */
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 10;
-  width: 360px;
-  background: rgba(255, 255, 255, 0.15);
-  border-radius: 1.5rem;
-  padding: 50px 40px;
-  backdrop-filter: blur(25px);
-  -webkit-backdrop-filter: blur(25px);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
-  border: none;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.hero-glass:hover {
-  transform: translate(-50%, -56%);
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
-}
+ /* Hero Glass Enhancements */
+    .hero-glass {
+      position: relative;
+      z-index: 10;
+      background: rgba(255, 255, 255, 0.15);
+      border-radius: 1.5rem;
+      padding: 50px 40px;
+      backdrop-filter: blur(25px);
+      -webkit-backdrop-filter: blur(25px);
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+      border: none;
+      color: #111;
+      /* Ajustado para flutuar mais acima da bandeja */
+      transform: translateY(-150px);
+      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+    }
+    .hero-glass:hover {
+      transform: translateY(-160px);
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+    }
+    .hero-glass:hover {
+      transform: translateY(-100px);
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+    }
     .hero-glass .tagline {
       font-family: 'Playfair Display', serif;
       font-style: italic;
@@ -132,14 +135,15 @@
       padding-top: 80px;
       margin: 0;
     }
-  .jumbotron {
-  position: relative;
-  margin-top: -80px;
-  height: 100vh;
-  background-image: url('img/gourmet_intro.png');
-  background-size: cover;
-  background-position: center bottom;
-}
+    .jumbotron {
+      margin-top: -80px;
+      height: 100vh;
+      background-image: url('img/master_cook_vialis.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center bottom;
+      background-attachment: scroll;
+    }
 
     /* --- BOTÃO WHATSAPP --- */
     .contact-float {
@@ -219,7 +223,7 @@
 <body>
 
 <!-- NAV BAR -->
-  <nav id="header-navbar" class="navbar navbar-expand-lg py-2" style="min-height: 60px; z-index: 20; position: relative;">
+<nav id="header-navbar" class="navbar navbar-expand-lg py-2" style="min-height: 60px;">
   <div class="container">
     <a class="navbar-brand d-flex align-items-center" href="https://joaomiro.github.io/VIALIS/" style="padding: 0;">
       <img src="img/vialis_horizontal.png" alt="VIALIS Logo" style="height: 34px;">
@@ -259,10 +263,10 @@
 </nav>
 
 
-  <!-- Hero Section -->
-  <div class="jumbotron d-flex align-items-center">
-  <div class="container d-flex justify-content-center align-items-center text-white" style="height:100%;">
-    <div class="hero-glass text-center" data-aos="fade-up">
+ <!-- Hero Section -->
+  <div class="jumbotron d-flex align-items-center" style="position: relative; z-index: 5; background-image: url('img/gourmet_intro.png'); background-size: cover; background-position: center; height: 110vh;">
+    <div class="container d-flex justify-content-center align-items-center text-white" style="height:100%; position: relative;">
+      <div class="hero-glass text-center" data-aos="fade-up">
         <img src="img/logo_vialis.png" alt="VIALIS" style="max-width: 180px; margin-bottom: 1.5rem; z-index: 11; position: relative;">
         <p class="tagline">Qualidade, frescura e sabor!</p>
         <div class="btn-group mb-4">
