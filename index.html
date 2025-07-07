@@ -28,14 +28,20 @@
 .hero-glass {
   background: rgba(255, 255, 255, 0.25);
   border-radius: 1.5rem;
-  padding: 50px 40px;
+  padding: 40px 30px;
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
   border: 1px solid rgba(255, 255, 255, 0.5);
   color: #111;
-  transform: translateY(-130px); /* mais alto */
+  transform: translateY(-130px); /* eleva sobre a bandeja */
   transition: transform 0.3s ease-in-out;
+}
+
+.hero-glass h1 {
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: #9B0F13;
 }
 
 #header-navbar {
@@ -53,7 +59,7 @@
 }
 
 .navbar-nav .nav-link {
-  color: #9B0F13!important;
+  color: #9B0F13 !important;
   font-weight: 500;
   transition: color 0.3s ease;
 }
@@ -79,6 +85,27 @@
   left: auto;
 }
 
+/* Corrige transparência do dropdown em mobile */
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+  }
+
+  .dropdown-menu {
+    background-color: rgba(255, 255, 255, 0.95) !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  .dropdown-menu .dropdown-item {
+    color: #333 !important;
+  }
+
+  .dropdown-menu .dropdown-item:hover {
+    background-color: #f8f9fa;
+  }
+}
+
 body {
   padding-top: 80px;
   margin: 0;
@@ -91,8 +118,9 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center bottom;
-  background-attachment: scroll; /* ou fixed se quiseres efeito parallax */
+  background-attachment: scroll;
 }
+
 </style>
 </head>
 
