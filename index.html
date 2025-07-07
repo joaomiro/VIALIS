@@ -27,15 +27,14 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
 
   <style>
-    .text-vialis-red {
-      color: #9B0F13;
-    }
+  .text-vialis-red {
+  color: #9B0F13;
+}
 
-    /* --- HERO BOX --- */
- /* Hero Glass Enhancements */
-    .hero-glass {
+/* --- HERO BOX --- */
+.hero-glass {
   position: absolute;
-  top: 22%;               /* ✱ Ajusta entre 20% e 30% até encaixar */
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 10;
@@ -53,98 +52,93 @@
   transform: translate(-50%, -56%);
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
 }
-    .hero-glass .tagline {
-      font-family: 'Playfair Display', serif;
-      font-style: italic;
-      margin-bottom: 2rem;
-      font-size: 1.2rem;
-    }
-   /* Faz o grupo de botões ocupar toda a largura útil e centra-o */
+.hero-glass .tagline {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
+}
 .hero-glass .btn-group {
   display: flex;
-  width: calc(100% - 80px);  /* largura total menos padding lateral (40px+40px) */
-  max-width: 320px;          /* opcional: evita que fiquem demasiado largas */
-  margin: 0 auto 1rem;       /* auto centra horizontalmente */
-  gap: 1px;                  /* espaço mínimo entre os botões */
+  width: calc(100% - 80px);
+  max-width: 320px;
+  margin: 0 auto 1rem;
+  gap: 1px;
 }
-
-/* Faz cada botão crescer igualmente dentro do grupo */
 .hero-glass .btn-group .btn {
   flex: 1;
-  margin: 0;                 /* remove margens extras */
+  margin: 0;
+}
+.hero-glass .dropdown-menu {
+  backdrop-filter: blur(10px);
+  background: rgba(255,255,255,0.85);
+  border: none;
+  margin-top: .5rem;
+}
+.hero-glass .dropdown-item i {
+  margin-right: 8px;
+  color: #9B0F13;
 }
 
-    /* Dropdown blur & style */
-    .hero-glass .dropdown-menu {
-      backdrop-filter: blur(10px);
-      background: rgba(255,255,255,0.85);
-      border: none;
-      margin-top: .5rem;
-    }
-    .hero-glass .dropdown-item i {
-      margin-right: 8px;
-      color: #9B0F13;
-    }
+/* --- NAVBAR --- */
+#header-navbar {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 1030;
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(212,175,55,0.4);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+  transition: background 0.3s ease;
+}
+.navbar-nav .nav-link {
+  color: #9B0F13 !important;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+.navbar-nav .nav-link:hover {
+  color: #b88a00 !important;
+}
+.navbar-toggler .lnr-menu {
+  color: #9B0F13;
+  font-size: 1.5rem;
+}
+.navbar-collapse {
+  background-color: transparent;
+  padding: 1.5rem;
+  max-width: 300px;
+  margin-left: auto;
+}
+.dropdown-menu {
+  right: 0; left: auto;
+}
 
-    /* --- NAVBAR --- */
-    #header-navbar {
-      position: fixed;
-      top: 0; left: 0; right: 0;
-      z-index: 1030;
-      background: rgba(255, 255, 255, 0.4);
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-      border-bottom: 1px solid rgba(212,175,55,0.4);
-      box-shadow: 0 4px 16px rgba(0,0,0,0.1);
-      transition: background 0.3s ease;
-    }
-    .navbar-nav .nav-link {
-      color: #9B0F13 !important;
-      font-weight: 500;
-      transition: color 0.3s ease;
-    }
-    .navbar-nav .nav-link:hover {
-      color: #b88a00 !important;
-    }
-    .navbar-toggler .lnr-menu {
-      color: #9B0F13;
-      font-size: 1.5rem;
-    }
-    .navbar-collapse {
-      background-color: transparent;
-      padding: 1.5rem;
-      max-width: 300px;
-      margin-left: auto;
-    }
-    .dropdown-menu {
-      right: 0; left: auto;
-    }
+/* --- DROPDOWN EM MOBILE --- */
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    background: rgba(255,255,255,0.95);
+    backdrop-filter: blur(10px);
+  }
+  .dropdown-menu {
+    background-color: rgba(255,255,255,0.95) !important;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+  .dropdown-menu .dropdown-item {
+    color: #333 !important;
+  }
+  .dropdown-menu .dropdown-item:hover {
+    background-color: #f8f9fa;
+  }
+}
 
-    /* --- DROPDOWN EM MOBILE --- */
-    @media (max-width: 991.98px) {
-      .navbar-collapse {
-        background: rgba(255,255,255,0.95);
-        backdrop-filter: blur(10px);
-      }
-      .dropdown-menu {
-        background-color: rgba(255,255,255,0.95) !important;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      }
-      .dropdown-menu .dropdown-item {
-        color: #333 !important;
-      }
-      .dropdown-menu .dropdown-item:hover {
-        background-color: #f8f9fa;
-      }
-    }
-
-    /* --- LAYOUT BASE --- */
-    body {
-      padding-top: 80px;
-      margin: 0;
-    }
- .jumbotron {
-  position: relative;     /* ✱ adicionado */
+/* --- LAYOUT BASE --- */
+body {
+  padding-top: 80px;
+  margin: 0;
+}
+.jumbotron {
+  position: relative;
   margin-top: -80px;
   height: 100vh;
   background-image: url('img/master_cook_vialis.png');
@@ -154,78 +148,78 @@
   background-attachment: scroll;
 }
 
-    /* --- BOTÃO WHATSAPP --- */
-    .contact-float {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background-color: #9B0F13;
-      color: #fff !important;
-      border-radius: 28px;
-      padding: 0 16px;
-      height: 52px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-size: 16px;
-      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
-      z-index: 2000;
-      text-decoration: none !important;
-      transition: background-color 0.3s ease;
-    }
-    .contact-float i {
-      font-size: 20px;
-    }
-    .contact-float:hover,
-    .contact-float:focus {
-      background-color: #b88a00;
-      color: #fff !important;
-      text-decoration: none;
-    }
-    .contact-tooltip {
-      margin-left: 4px;
-      font-size: 15px;
-      font-weight: 500;
-      color: #fff;
-      pointer-events: none;
-    }
-    @media (max-width: 767.98px) {
-      .contact-float {
-        border-radius: 50%;
-        width: 60px; height: 60px;
-        justify-content: center; gap: 0;
-      }
-      .contact-tooltip {
-        position: absolute;
-        right: 70px; top: 50%;
-        transform: translateY(-50%);
-        background-color: #fffbe6;
-        color: #9B0F13;
-        padding: 6px 14px;
-        border-radius: 6px;
-        font-size: 14px;
-        white-space: nowrap;
-        opacity: 0;
-        pointer-events: none;
-        transition: opacity 0.3s ease;
-        border: 1px solid rgba(212,175,55,0.6);
-        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-        font-weight: 500;
-      }
-      .contact-float:hover .contact-tooltip {
-        opacity: 1;
-      }
-    }
+/* --- BOTÃO WHATSAPP --- */
+.contact-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #9B0F13;
+  color: #fff !important;
+  border-radius: 28px;
+  padding: 0 16px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+  z-index: 2000;
+  text-decoration: none !important;
+  transition: background-color 0.3s ease;
+}
+.contact-float i {
+  font-size: 20px;
+}
+.contact-float:hover,
+.contact-float:focus {
+  background-color: #b88a00;
+  color: #fff !important;
+  text-decoration: none;
+}
+.contact-tooltip {
+  margin-left: 4px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #fff;
+  pointer-events: none;
+}
+@media (max-width: 767.98px) {
+  .contact-float {
+    border-radius: 50%;
+    width: 60px; height: 60px;
+    justify-content: center; gap: 0;
+  }
+  .contact-tooltip {
+    position: absolute;
+    right: 70px; top: 50%;
+    transform: translateY(-50%);
+    background-color: #fffbe6;
+    color: #9B0F13;
+    padding: 6px 14px;
+    border-radius: 6px;
+    font-size: 14px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    border: 1px solid rgba(212,175,55,0.6);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    font-weight: 500;
+  }
+  .contact-float:hover .contact-tooltip {
+    opacity: 1;
+  }
+}
 
-    /* Corrige posição de seções ancoradas sob a navbar fixa */
-    section {
-      scroll-margin-top: 80px;
-    }
+/* Corrige posição de seções ancoradas sob a navbar fixa */
+section {
+  scroll-margin-top: 80px;
+}
 
-    /* scroll suave */
-    html {
-      scroll-behavior: smooth;
-    }
+/* scroll suave */
+html {
+  scroll-behavior: smooth;
+}
   </style>
 </head>
 
@@ -272,7 +266,7 @@
 </nav>
 
 
- <!-- Hero Section -->
+  <!-- Hero Section -->
   <div class="jumbotron d-flex align-items-center" style="position: relative; z-index: 5; background-image: url('img/gourmet_intro.png'); background-size: cover; background-position: center; height: 110vh;">
     <div class="container d-flex justify-content-center align-items-center text-white" style="height:100%; position: relative;">
       <div class="hero-glass text-center" data-aos="fade-up">
