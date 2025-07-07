@@ -32,21 +32,42 @@
     }
 
     /* --- HERO BOX --- */
+      /* Hero Glass Enhancements */
     .hero-glass {
-      background: rgba(255, 255, 255, 0.25);
+      background: rgba(255, 255, 255, 0.15);
       border-radius: 1.5rem;
-      padding: 40px 30px;
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
-      border: 1px solid rgba(255, 255, 255, 0.5);
+      padding: 50px 40px;
+      backdrop-filter: blur(25px);
+      -webkit-backdrop-filter: blur(25px);
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+      border: none;
       color: #111;
       transform: translateY(-90px);
-      transition: transform 0.3s ease-in-out;
+      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
     }
-    .hero-glass h1 {
-      font-size: 1.9rem;
-      font-weight: 700;
+    .hero-glass:hover {
+      transform: translateY(-100px);
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+    }
+    .hero-glass .tagline {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      margin-bottom: 2rem;
+      font-size: 1.2rem;
+    }
+    .hero-glass .btn-group .btn {
+      width: 160px;
+    }
+
+    /* Dropdown blur & style */
+    .hero-glass .dropdown-menu {
+      backdrop-filter: blur(10px);
+      background: rgba(255,255,255,0.85);
+      border: none;
+      margin-top: .5rem;
+    }
+    .hero-glass .dropdown-item i {
+      margin-right: 8px;
       color: #9B0F13;
     }
 
@@ -235,15 +256,15 @@
 </nav>
 
 
- <!-- Hero Section -->
+  <!-- Hero Section -->
   <div class="jumbotron d-flex align-items-center" style="background-image: url('img/gourmet_intro.png'); background-size: cover; background-position: center; height: 110vh;">
     <div class="container d-flex justify-content-center align-items-center text-white" style="height:100%;">
-      <div class="hero-glass text-center">
-        <img src="img/logo_vialis.png" alt="VIALIS" style="max-width: 180px; margin-bottom: 20px;">
-        <p>Qualidade, frescura e sabor!</p>
-        <div class="btn-group mb-2">
-          <a href="#sobre" class="btn btn-danger">Saber Mais</a>
-          <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <div class="hero-glass text-center" data-aos="fade-up">
+        <img src="img/logo_vialis.png" alt="VIALIS" style="max-width: 180px; margin-bottom: 1.5rem;">
+        <p class="tagline">Qualidade, frescura e sabor!</p>
+        <div class="btn-group mb-4">
+          <a href="#sobre" class="btn btn-outline-light">Saber Mais</a>
+          <button type="button" class="btn btn-outline-light dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <span class="sr-only">Toggle Catálogo</span>
           </button>
           <div class="dropdown-menu text-left">
@@ -251,6 +272,7 @@
             <a class="dropdown-item" href="ficheiros/catalogo-asiatico.pdf" download><i class="fas fa-fish"></i>Catálogo Asiático</a>
           </div>
         </div>
+        <hr style="border-top:1px solid rgba(255,255,255,0.5); width:50px; margin:0 auto 2rem;">
       </div>
     </div>
   </div>
