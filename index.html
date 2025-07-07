@@ -32,7 +32,7 @@
     }
 
     /* --- HERO BOX --- */
-  /* Hero Glass Enhancements */
+ /* Hero Glass Enhancements */
     .hero-glass {
       position: relative;
       z-index: 10;
@@ -44,8 +44,13 @@
       box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
       border: none;
       color: #111;
-      transform: translateY(-90px);
+      /* Ajustado para flutuar mais acima da bandeja */
+      transform: translateY(-150px);
       transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+    }
+    .hero-glass:hover {
+      transform: translateY(-160px);
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
     }
     .hero-glass:hover {
       transform: translateY(-100px);
