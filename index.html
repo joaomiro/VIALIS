@@ -34,24 +34,25 @@
     /* --- HERO BOX --- */
  /* Hero Glass Enhancements */
     .hero-glass {
-      position: relative;
-      z-index: 10;
-      background: rgba(255, 255, 255, 0.15);
-      border-radius: 1.5rem;
-      padding: 50px 40px;
-      backdrop-filter: blur(25px);
-      -webkit-backdrop-filter: blur(25px);
-      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
-      border: none;
-      color: #111;
-      /* Ajustado para flutuar mais acima da bandeja */
-      transform: translateY(-150px);
-      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
-    }
-    .hero-glass:hover {
-      transform: translateY(-160px);
-      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
-    }
+  position: absolute;
+  top: 22%;               /* ✱ Ajusta entre 20% e 30% até encaixar */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  width: 360px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 1.5rem;
+  padding: 50px 40px;
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+  border: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.hero-glass:hover {
+  transform: translate(-50%, -56%);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+}
     .hero-glass .tagline {
       font-family: 'Playfair Display', serif;
       font-style: italic;
@@ -131,15 +132,16 @@
       padding-top: 80px;
       margin: 0;
     }
-    .jumbotron {
-      margin-top: -80px;
-      height: 100vh;
-      background-image: url('img/master_cook_vialis.png');
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center bottom;
-      background-attachment: scroll;
-    }
+ .jumbotron {
+  position: relative;     /* ✱ adicionado */
+  margin-top: -80px;
+  height: 100vh;
+  background-image: url('img/master_cook_vialis.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-attachment: scroll;
+}
 
     /* --- BOTÃO WHATSAPP --- */
     .contact-float {
