@@ -33,12 +33,6 @@
 
 /* --- HERO BOX --- */
 .hero-glass {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-55%, -60%); /* <--- aqui ajustamos horizontalmente */
-  z-index: 10;
-  width: 360px;
   background: rgba(255, 255, 255, 0.15);
   border-radius: 1.5rem;
   padding: 50px 40px;
@@ -46,10 +40,13 @@
   -webkit-backdrop-filter: blur(25px);
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
   border: none;
+  width: 360px;
+  z-index: 10;
+  text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .hero-glass:hover {
-  transform: translate(-55%, -63%);
+  transform: scale(1.02);
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
 }
 .hero-glass .tagline {
@@ -138,6 +135,9 @@ body {
   margin: 0;
 }
 .jumbotron {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
   margin-top: -80px;
   height: 100vh;
