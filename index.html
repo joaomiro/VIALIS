@@ -33,20 +33,24 @@
 
 /* --- HERO BOX --- */
 .hero-glass {
+  position: absolute;
+  top: 45%; /* Subido um pouco — estava 50% */
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centralizado */
+  z-index: 10;
+
+  width: 310px;
+  padding: 30px 35px; /* Reduzido */
   background: rgba(255, 255, 255, 0.15);
   border-radius: 1.5rem;
-  padding: 30px 40px;
   backdrop-filter: blur(25px);
   -webkit-backdrop-filter: blur(25px);
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
   border: none;
-  width: 310px;
-  z-index: 10;
-  text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .hero-glass:hover {
-  transform: scale(1.02);
+  transform: translate(-50%, -53%);
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
 }
 .hero-glass .tagline {
